@@ -1,0 +1,21 @@
+.nav {
+  display: none;
+}
+
+@container header (min-width: 768px) {
+  .nav {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 42px;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    color: #333136;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
