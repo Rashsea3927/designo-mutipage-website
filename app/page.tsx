@@ -1,5 +1,7 @@
+import MainVisual from '@/components/home/MainVisual';
+
 const HomePage = () => {
-  return <div>HomePage</div>;
+  return <MainVisual />;
 };
 
 export default HomePage;
