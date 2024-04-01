@@ -1,18 +1,25 @@
 .container {
   position: relative;
-  padding: 80px 24px 0;
+  padding-top: 80px;
+  margin-bottom: 120px;
+  height: 843px;
   background-color: #e7816b;
-  text-align: center;
   background-image: url('/assets/shared/desktop/bg-pattern-small-circle.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+}
+
+.content {
+  text-align: center;
 }
 
 .text {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 24px;
+  width: 327px;
+  margin: 0 auto 24px;
 }
 
 .heading {
@@ -27,11 +34,111 @@
 }
 
 .hero {
-  margin: 80px auto 0;
-  width: 284px;
+  height: 573px;
+  background-image: url('/assets/desktop/image-hero-phone.png');
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position: center -70px;
 }
 
 .hero-image {
   width: 100%;
   height: auto;
+}
+
+@container main (width <= 374px) {
+  .hero {
+    background-size: 550px;
+  }
+
+  .text {
+    padding-inline: 16px;
+  }
+}
+
+@container main (min-width: 768px) {
+  .container {
+    padding: 60px 58px 0px;
+    margin-inline: auto;
+    border-radius: 15px;
+    width: 689px;
+    background-size: 640px;
+    background-position: 160px center;
+  }
+
+  .text {
+    width: 573px;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .heading {
+    font-size: 48px;
+  }
+
+  .paragraph {
+    margin: 0 auto;
+    width: 445px;
+    font-size: 16px;
+  }
+
+  .hero {
+    background-size: 600px;
+    background-position: center -70px;
+  }
+}
+
+@container main (min-width: 1024px) {
+  .container {
+    height: 640px;
+    width: 980px;
+    margin-bottom: 160px;
+    display: flex;
+    align-items: center;
+    padding: 145px 0;
+    padding-left: 96px;
+  }
+
+  .content {
+    text-align: left;
+  }
+
+  .text {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+
+  .paragraph {
+    margin: 0;
+  }
+
+  .hero {
+    width: 370px;
+    background-position: -100px -50px;
+    background-size: 484px;
+  }
+}
+
+@container main (min-width: 1200px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    width: 1110px;
+    height: 640px;
+    padding: 0;
+    padding-left: 96px;
+  }
+
+  .text {
+    width: 540px;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
+  .hero {
+    margin: 0;
+    width: 500px;
+    background-size: 516px;
+    background-position: center -54px;
+  }
 }

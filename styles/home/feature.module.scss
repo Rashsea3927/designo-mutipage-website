@@ -1,0 +1,100 @@
+.feature {
+  margin-bottom: 120px;
+  container: feature / inline-size;
+}
+
+.list {
+  display: grid;
+  gap: 80px;
+  margin: 0 auto;
+  width: 87.2%;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+
+.image {
+  position: relative;
+  width: 202px;
+  height: 202px;
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: url('/assets/shared/desktop/bg-pattern-small-circle.svg');
+  }
+
+  &.resourceful::after {
+    transform: rotate(-90deg);
+  }
+
+  &.friendly::after {
+    transform: rotate(90deg);
+  }
+}
+
+.text {
+  text-align: center;
+  color: #333136;
+  display: grid;
+  gap: 32px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.625;
+}
+
+@container feature (width >= 540px) {
+  .list {
+    width: 89.7%;
+    max-width: 689px;
+  }
+
+  .item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .text {
+    text-align: left;
+    gap: 16px;
+  }
+}
+
+@container feature (width >= 1024px) {
+  .list {
+    width: 95.7%;
+    max-width: 980px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .item {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .text {
+    gap: 32px;
+    text-align: center;
+  }
+}
+
+@container feature (width >= 1200px) {
+  .list {
+    max-width: 1110px;
+  }
+}

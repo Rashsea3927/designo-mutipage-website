@@ -6,12 +6,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 24px 34px;
+  padding: 35px 0 34px;
+  width: 87.2vw;
+  margin: 0 auto;
   background-color: #fff;
 }
 
 @container header (min-width: 768px) {
   .header-menu {
-    padding: 64px 40px;
+    padding: 64px 0;
+  }
+}
+
+@container header (min-width: 1024px) {
+  .header-menu {
+    width: 980px;
+  }
+}
+
+@container header (min-width: 1200px) {
+  .header-menu {
+    width: 1110px;
   }
 }

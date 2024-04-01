@@ -6,7 +6,14 @@
   letter-spacing: 1px;
   font-weight: 500;
   color: #333136;
+  text-align: center;
   width: 152px;
   background-color: #fff;
   text-transform: uppercase;
+  transition: background-color 0.4s, color 0.4s;
+
+  &:hover {
+    background-color: #ffad9b;
+    color: #fff;
+  }
 }
